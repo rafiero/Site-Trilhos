@@ -1,0 +1,291 @@
+/*Configuracoes da pagina*/
+
+@font-face {
+    font-family: ubuntu;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.woff);
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url(fonts/Ubuntu/Ubuntu-Bold.woff);
+    font-weight: bold;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: ubuntu;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: bolder;
+    top: 0;
+}
+h2 {
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+
+.navbar {
+    background-color: rgba(214, 214, 214, 0.787);
+}
+
+.nav-link {
+    color: #29A9CA;
+    font-size: 30px;
+    padding-right: 50px;
+}
+
+.container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /*esconder scrollbar*/
+    -webkit-scrollbar: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.containerBlog {
+    margin: 0px 50px;
+}
+
+section {
+    margin: 100px;
+}
+
+#galeria, #midia, #parcerias, #faq {
+    width: 100%;
+    margin-top: -5%;
+}
+
+#linhaSobre, #linhaMidia {
+    height: 10px;
+    width: 100%;
+    background-color: #FFE45B;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#linhaOds, #linhaParceiros {
+    height: 10px;
+    width: 100%;
+    background-color: #7EBB4F;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#linhaGaleria, #linhaFaq {
+    height: 10px;
+    width: 100%;
+    background-color: #29A9CA;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    color: black;
+}
+
+.btn-link:hover {
+    color: black;
+}
+
+/*home*/
+#home{
+    width: 100vw;
+    height: 100vh;
+}
+/*sobre*/
+
+.divisao {
+    width: 50%;
+    float: right;
+    text-align: justify;
+}
+
+#mais .divisao {
+    padding: 20px;
+}
+
+#textoSobre {
+    margin-right: 50px;
+}
+
+/*ods*/
+
+#ods {
+    margin-top: -100px;
+}
+
+#ods .divisao {
+    padding: 2%;
+}
+
+#ods .card {
+    border: #9DC974 5px solid;
+}
+
+/*galeria*/
+
+#galeria #carouselExampleIndicators {
+    width: 60vw;
+}
+
+.foto {
+    width: 60vw;
+    border-radius: 0px 50px;
+}
+
+.icone {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: 60vw;
+}
+
+#galeria li {
+    margin-bottom: 60px;
+}
+
+/*Midia*/
+
+#midia .card {
+    border: #9e7d12 5px solid;
+}
+
+/*parceiros*/
+
+
+#demo {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.green {
+    background-color: #6fb936;
+}
+
+.thumb {
+    margin-bottom: 30px;
+}
+
+.page-top {
+    margin-top: 85px;
+}
+
+img.zoom {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.transition {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    color: #000;
+}
+
+.modal-footer {
+    display: none;
+}
+
+/*faq*/
+
+#faq .card {
+    border: #6FBAD5 5px solid;
+}
+
+/*Card*/
+
+.card {
+    border: 5px solid;
+    border-radius: 0px 50px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border: unset;
+    background: unset;
+    color: black;
+}
+
+.card-body .divisao {
+    padding: 25px;
+}
+
+/*blog*/
+
+#blog{
+    margin: 0px 100px;
+}
+
+.postagem {
+    margin-right: 60px;
+    float: right;
+}
+
+#blog .card {
+    width: 18rem;
+}
+
+#sicredi .divisao{
+    float: left;
+    padding: 25px;
+}
+
+/*========= Media query================*/
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 70px;
+    }
+    .divisao {
+        width: 100%;
+        float: unset;
+    }
+    #textoSobre {
+        margin-right: 0px;
+    }
+    #galeria li {
+        display: none;
+    }
+    #midia, #parcerias {
+        margin-top: -100px;
+    }
+    #blog .card {
+        width: 85%;
+    }
+    #blog{
+        margin: unset;
+    }
+}
