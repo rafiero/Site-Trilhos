@@ -1,0 +1,47 @@
+<%- include('../../partials/header.ejs'); %>
+<body>
+    <%- include('../../partials/navbar.ejs'); %>
+    <div class="container">
+        <hr>
+        <h2>Usuarios</h2>
+        <hr>
+        <a class="btn btn-success" href="/admin/user/create">Criar novo usuario</a>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Deletar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => {%>
+                    <tr>
+                        <th><%= user.id %></th>
+                        <th><%= user.name %></th>
+                        <th><%= user.email %></th>
+                        <th>                            
+                            <form method="POST" action="/user/delete" style="display: inline;" onsubmit="preventDelete(event, this)">
+                                <input type="hidden" name="id" value="<%= user.id %>">
+                                <button class="btn btn-danger">Deletar</button>
+                            </form>
+                        </th>
+                    </tr>
+                <% })%>                
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    function preventDelete(event, form){
+        event.preventDefault();
+        var decision = confirm("Voce quer deletar essa categoria?");
+        if(decision){
+            form.submit();
+        }
+        else{}
+    }
+</script>
+<%- include('../../partials/footer.ejs'); %>

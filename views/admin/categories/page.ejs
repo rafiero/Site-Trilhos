@@ -1,0 +1,27 @@
+<%- include('../../partials/header.ejs'); %>
+<body>
+    <%- include('../../partials/homenavbar.ejs'); %>
+    <div class="container">
+        <br>
+        <h1>Blog</h1>
+        <br>
+        <section class="row" id="blog">
+            <% articles.forEach(article => { %>
+                <div class="card postagem">                    
+                    <div class="card-body">
+                        <h5 class="card-title"><%= article.title %></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="<%= article.slug %>" class="btn btn-primary">Ler Artigo</a>
+                    </div>
+                </div>
+                <br>
+            <% }) %>
+            </section>
+        <hr>
+        <div class="row">
+            
+            
+        </div>
+    </div>    
+</body>
+<%- include('../../partials/footer.ejs'); %>

@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs'); %>
+
+<body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-md fixed-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">
+            <img src="../../imgs/logoTrilhos.png" height="70" class="d-inline-block align-top">
+        </a>
+    
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span><img src="../../imgs/icon.png" height="40px"></span>
+        </button>        
+        <!-- Navbar links -->
+        
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto" id="homelink">                  
+                <li class="nav-item ml-auto"><a class="nav-link" href="/">Inicio</a></li>
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="https://www.instagram.com/projetotrilhos/" target="_blank">
+                        <img src="../../imgs/insta.png" height="50px">
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="https://www.facebook.com/trilhos.projeto" target="_blank">
+                        <img src="../../imgs/face.png" height="50px">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--<%- include('partials/front/sections/home.ejs'); %>-->
+    <div class="container">
+        <section id="sicredi" >
+            <h1 style="margin-top: 100px;">Onboarding</h1>
+            <hr>
+            <div class="divisao">            
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/85OdYafOblg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="divisao">
+                <a class="btn btn-success btn-block" href="../../docs/mvp.pdf" target="_blank">MVP</a> 
+                <a class="btn btn-success btn-block" href="../../docs/prototipo.pdf" target="_blank">Prototipo</a>
+                <a class="btn btn-success btn-block" href="https://drive.google.com/drive/u/0/folders/1iU0IWqQYgwAq2lE4JMYxUHuvHMMGjwOH" target="_blank">Drive</a> 
+            </div>
+        </section>
+    </div>
+</body>
+<%- include('partials/footer.ejs'); %>

@@ -1,0 +1,42 @@
+<%- include('../../partials/header.ejs'); %>
+
+<body>
+    <%- include('../../partials/homenavbar.ejs'); %>
+    <div class="container">
+        <br>
+        <h1>Blog</h1>
+        <br>
+        <div class="row" id="blog">
+            
+                <% result.articles.rows.forEach(article => { %>
+                <div class="card postagem" st>
+
+                    <div class="card-body">
+                        <h5 class="card-title"><%= article.title %></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="<%= article.slug %>" class="btn btn-primary">Ler Artigo</a>
+                    </div>
+                </div>
+                <br>
+                <% }) %>
+            
+        </div>
+        <hr>
+        <div class="row">
+            <div class=" col col-12">
+                <% if(result.page > 2) {%>
+                <a style="float: left;" href="/articles/page/<%= result.page - 1 %>">anterior</a>
+                <% }else if(result.page == 2){%>
+                <a style="float: left;" href="/blog">anterior</a>
+                <% }%>
+
+                <% if(result.next) {%>
+                <a style="float: right;" href="/articles/page/<%= result.page + 1 %>">proxima</a>
+                <% }%>
+            </div>
+
+        </div>
+    </div>
+</body>
+<%- include('../../partials/footer.ejs'); %>

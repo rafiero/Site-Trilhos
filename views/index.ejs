@@ -1,0 +1,68 @@
+<%- include('partials/header.ejs'); %>
+
+<body>
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-md fixed-top ">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">
+            <img src="../../imgs/logoTrilhos.png" height="70" class="d-inline-block align-top">
+        </a>
+    
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span><img src="../../imgs/icon.png" height="40px"></span>
+        </button>        
+        <!-- Navbar links -->
+        
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto" id="homelink">
+                <li class="nav-item ml-auto"><a class="nav-link" href="#home">Home</a></li>                  
+                <li class="nav-item ml-auto"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="#ods">ODS</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="#galeria">Galeria</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="#midia">Midia</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="#parcerias">Parcerias</a></li>
+                <li class="nav-item ml-auto"><a class="nav-link" href="/blog">Blog</a></li>
+                <!--<li class="nav-item ml-auto"><a class="nav-link" href="#faq">FAQ</a></li>-->
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="https://www.instagram.com/projetotrilhos/" target="_blank">
+                        <img src="../../imgs/insta.png" height="50px">
+                    </a>
+                </li>
+                <li class="nav-item ml-auto">
+                    <a class="nav-link" href="https://www.facebook.com/trilhos.projeto" target="_blank">
+                        <img src="../../imgs/face.png" height="50px">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--<%- include('partials/front/sections/home.ejs'); %>-->
+    <div class="container">
+        <div class="row">
+            <!--<section id="home">
+                <%- include('partials/front/sections/home.ejs'); %>
+            </section>-->
+            <section id="sobre">
+                <%- include('partials/front/sections/sobre.ejs'); %>
+            </section>
+            <section id="ods">
+                <%- include('partials/front/sections/ods.ejs'); %>
+            </section>
+            <section id="galeria">
+                <%- include('partials/front/sections/galeria.ejs'); %>
+            </section>
+            <section id="midia">
+                <%- include('partials/front/sections/midia.ejs'); %>
+            </section>
+            <section id="parcerias">
+                <%- include('partials/front/sections/parcerias.ejs'); %>
+            </section>
+            <!--<section id="faq">
+                <%- include('partials/front/sections/faq.ejs'); %>
+            </section>-->
+        </div>
+    </div>
+
+</body>
+<%- include('partials/footer.ejs'); %>
